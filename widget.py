@@ -12,6 +12,12 @@ def button_func():
     # either config or configure is working
     label['text'] = input
 
+    # disabling entry after clicking the button
+    entry['state'] = 'disabled'
+
+    # we can also see another parameter using..
+    # print(label.configure())
+
 # window
 app = tk.Tk()
 app.title('Window and Widgets')
