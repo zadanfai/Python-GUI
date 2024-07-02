@@ -4,6 +4,14 @@ from tkinter import ttk
 def button_func():
     print('The button was pressed')
 
+    # get the content of the entry
+    input = entry.get()
+
+    # update the label
+    # label.config(text = input) 
+    # either config or configure is working
+    label['text'] = input
+
 # window
 app = tk.Tk()
 app.title('Window and Widgets')
