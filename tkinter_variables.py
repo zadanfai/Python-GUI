@@ -11,7 +11,7 @@ app.title = 'Tkinter Variables'
 app.geometry('500x300')
 
 # tkinter variables
-string_var = tk.StringVar()
+string_var = tk.StringVar(value = 'Label')
 
 # widgets
 label = ttk.Label(master = app, text = 'Label', textvariable = string_var)
