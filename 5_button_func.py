@@ -39,7 +39,7 @@ entry.pack()
 #     text = 'Button', 
 #     command = lambda: button_func(entry_string)) 
 
-# (2) is creating a nested function
+# (2) is creating a nested function & returning the function
 button = ttk.Button(app, text = 'Button', command = outer_func(entry_string))
 
 button.pack()
