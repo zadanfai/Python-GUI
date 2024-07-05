@@ -1,6 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
 
+
+# im creating a function that will show us the location of the pointer in the app
+def get_pos(event):
+    print(f'x: {event.x} y: {event.y}')
+
 # window
 app = tk.Tk()
 app.geometry('600x500')
@@ -13,8 +18,8 @@ text.pack()
 entry = ttk.Entry(app)
 entry.pack()
 
-btn = ttk.Button(app, text = 'A Button')
-btn.pack()
+button = ttk.Button(app, text = 'A Button')
+button.pack()
 
 # Events can be lots of things, such as..
 # (1) Keyboard inputs
@@ -26,7 +31,10 @@ btn.pack()
 # Format : <modifier-type-detail>
 
 # events
-app.bind('<Alt-KeyPress-a>', lambda event: print(event))
+button.bind('<Alt-KeyPress-a>', lambda event: print(event))
+app.bind('<Motion>', get_pos)
+
+app.bind('<KeyPress>', lambda event: print(f'a button was presesd ({event.char})'))
 
 # run
 app.mainloop()
