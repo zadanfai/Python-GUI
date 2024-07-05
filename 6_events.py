@@ -32,9 +32,15 @@ button.pack()
 
 # events
 button.bind('<Alt-KeyPress-a>', lambda event: print(event))
+app.bind('<KeyPress>', lambda event: print(f'a button was presesd ({event.char})'))
+
 app.bind('<Motion>', get_pos)
 
-app.bind('<KeyPress>', lambda event: print(f'a button was presesd ({event.char})'))
+# list of events
+# pythontutorial.net/tkinter/tkinter-event-binding
+
+entry.bind('<FocusIn>', lambda event: print('entry field was selected'))
+entry.bind('<FocusOut>', lambda event: print('entry field was unselected'))
 
 # run
 app.mainloop()
